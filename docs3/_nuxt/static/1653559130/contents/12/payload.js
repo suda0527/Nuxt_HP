@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/contents/12", (function(a){return {data:[{item:{id:12,title:"コールセンター",content:"紹介文をいれてください",url:"product_spot_6e3dc3584c.png",published_at:a,created_at:a,updated_at:"2022-05-26T04:50:00.783Z"}}],fetch:{},mutations:void 0}}("2021-12-17T09:36:36.985Z")));

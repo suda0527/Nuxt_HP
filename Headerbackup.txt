@@ -1,0 +1,168 @@
+<!-- component -->
+<!-- This is an example component -->
+<template>
+  <div class="">
+    <header class="fixed top-0 left-0 right-0">
+      <nav
+        class="
+          font-mono
+          flex
+          justify-between
+          w-full
+        "
+      >
+        <div class="flex">
+          <a href="/" class="my-0">
+            <img
+              class="mr-2 p-1 md:p-4 lg:p-4"
+              src="@/assets/images/logo.png"
+              width="200"
+              alt=""
+            />
+          </a>
+          <div class="pc-nav m-auto whitespace-nowrap">
+            営業時間<br />
+            平日 9:00〜17:30<br />
+          </div>
+          <div class="pc-nav m-auto px-2 whitespace-nowrap">
+            TEL：027-212-3541<br />
+            FAX：027-289-5287
+          </div>
+        </div>
+
+        <div class="pc-nav">
+          <div class="md:items-center md:w-auto">
+            <div class="md:flex hidden pt-5">
+              <a class="block mr-4" href="/">home</a>
+              <a class="block mr-4" href="/performance.html">業務内容</a>            
+              <a class="block mr-4" href="/corporate.html">会社情報</a>
+              <a class="block mr-4" href="/access.html">アクセス</a>
+              <a class="block mr-4" href="/pre-form.html">問い合わせ</a>
+              <a class="block mr-4" href="/recruitment">採用情報</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- <div id="hamburger">
+          <span></span>
+      </div> -->
+    </header>
+    <style>
+      Header{
+        font-weight:bold;
+        z-index: 99999;
+        background-color:rgba(255,255,255,1);
+      } 
+      Header{
+        position: fixed;
+        height: 70px;
+        width:100%;
+        z-index: 999;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+      }
+      Header:UpMove{
+        animation: UpAnime 0.5s forwards;
+      }
+
+      @keyframes UpAnime{
+        from {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        to {
+          opacity: 0;
+          transform: translateY(-100px);
+        }
+      }
+
+      Header.DownMove{
+        animation: DownAnime 0.5s forwards;
+      }
+      @keyframes DownAnime{
+        from {
+          opacity: 0;
+          transform: translateY(-100px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      section{
+        padding:300px 0;
+      }
+
+    </style>
+    
+    <div class="bottomNav fixed bottom-0 w-full">
+      <nav
+        style="border: 1px solid gray"
+        class="md:hidden bottom-0 w-full bg-gray-700 text-xs"
+      >
+        <ul
+          class="
+            flex
+            justify-around
+            text-white text-center
+            opacity-75
+            font-bold
+          "
+        >
+          <li class="py-4 hover:bg-gray-500">
+            <a href="/">
+              <span class="text-xs whitespace-nowrap">home</span>
+            </a>
+          </li>
+
+          <li class="py-4 hover:bg-gray-500">
+            <a href="/performance">
+              <span class="text-sm whitespace-nowrap">業務内容</span>
+            </a>
+          </li>
+          <li class="py-4 hover:bg-gray-500">
+            <a href="/corporate">
+              <span class="text-sm whitespace-nowrap">会社情報</span>
+            </a>
+          </li>
+
+          <li class="py-4 hover:bg-gray-500">
+            <a href="/access">
+              <span class="text-sm whitespace-nowrap">アクセス</span>
+            </a>
+          </li>
+          <li class="py-4 hover:bg-gray-500">
+            <a href="/pre-form">
+              <span class="text-sm whitespace-nowrap">問い合わせ</span>
+            </a>
+          </li>
+          <li class="py-4 hover:bg-gray-500">
+            <a href="https://78mjgsf4.jbplt.jp/" target="_blank" rel="noopener">
+              <span class="text-sm whitespace-nowrap">採用情報</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</template>
+
+<script>
+if (process.browser) {
+ const ham = document.querySelector('#js-hamburger');
+const nav = document.querySelector('#js-nav');
+
+ham.addEventListener('click', function () {
+
+  ham.classList.toggle('active');
+  nav.classList.toggle('active');
+
+}); 
+}
+ </script>
+
+

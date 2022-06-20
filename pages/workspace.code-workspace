@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"name": "TEST",
+			"path": "..\\..\\..\\Users\\須田修平\\Desktop\\TEST"
+		},
+		{
+			"path": "..\\..\\..\\web_test"
+		},
+		{
+			"path": ".."
+		},
+		{
+			"path": "..\\..\\..\\reneil_HP"
+		}
+	],
+	"settings": {
+		"nuxt.isNuxtApp": false
+	}
+}

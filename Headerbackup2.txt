@@ -1,0 +1,358 @@
+<!-- component -->
+<!-- This is an example component -->
+<template>
+  <div class="">
+    <header class="fixed top-0 left-0 right-0">
+      <nav
+        class="
+          font-mono
+          flex
+          justify-between
+          w-full
+        "
+      >
+        <div class="flex">
+          <a href="/" class="my-0">
+            <img
+              class="mr-2 p-1 md:p-4 lg:p-4"
+              src="@/assets/images/logo.png"
+              width="200"
+              alt=""
+            />
+          </a>
+          <div class="pc-nav m-auto whitespace-nowrap">
+            営業時間<br />
+            平日 9:00〜17:30<br />
+          </div>
+          <div class="pc-nav m-auto px-2 whitespace-nowrap">
+            TEL：027-212-3541<br />
+            FAX：027-289-5287
+          </div>
+        </div>
+
+        <div class="pc-nav">
+          <div class="md:items-center md:w-auto">
+            <div class="md:flex hidden pt-5">
+              <a class="block mr-4" href="/">home</a>
+              <a class="block mr-4" href="/performance.html">業務内容</a>            
+              <a class="block mr-4" href="/corporate.html">会社情報</a>
+              <a class="block mr-4" href="/access.html">アクセス</a>
+              <a class="block mr-4" href="/pre-form.html">問い合わせ</a>
+              <a class="block mr-4" href="/recruitment.html">採用情報</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <nav class="header__nav nav" id="js-nav">
+        <ul class="nav__items nav-items">
+          <li class="nav-items__item"><a href="">メニュー</a></li>
+          <li class="nav-items__item"><a href="">メニュー</a></li>
+          <li class="nav-items__item"><a href="">メニュー</a></li>
+          <li class="nav-items__item"><a href="">メニュー</a></li>
+        </ul>
+      </nav>
+
+        <button class="header__hamburger hamburger" id="js-hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      <!-- <div id="hamburger">
+          <span></span>
+      </div> -->
+    </header>
+    <style>
+      <!-- .header_nav nav{
+        display:none;
+      } -->
+
+      <!-- @media screen and (max-width: 940px) {
+        .pc-nav{
+          display:none;
+        }
+      } -->
+
+        ul,
+        li {
+          list-style: none;
+        }
+
+        .header__inner {
+          padding: 0 20px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          height: inherit;
+          position: relative;
+        }
+
+        .header__title {
+          width: 80px;
+        }
+
+
+        @media screen and (min-width: 960px) {
+          .header__title {
+            width: 120px;
+          }
+        }
+
+        .header__title img {
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
+
+        .header__nav {
+          position: absolute;
+          right: 0;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100vh;
+          transform: translateX(100%);
+          background-color: #fff;
+          transition: ease .4s;
+        }
+
+
+        @media screen and (min-width: 960px) {
+          .header__nav {
+            position: static;
+            transform: initial;
+            background-color: inherit;
+            height: inherit;
+            display: flex;
+            justify-content: end;
+            width: 50%;
+          }
+        }
+
+
+        @media screen and (min-width: 960px) {
+          .nav__items {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            height: initial;
+            justify-content: space-between;
+          }
+        }
+
+        .nav-items {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          padding: 0;
+        }
+
+
+        @media screen and (min-width: 960px) {
+          .nav-items {
+            padding-top: inherit;
+            padding-bottom: inherit;
+            position: inherit;
+            top: 0;
+            left: 0;
+            transform: translate(0, 0);
+          }
+        }
+
+        .nav-items__item a {
+          color: black;
+          width: 100%;
+          display: block;
+          text-align: center;
+          font-size: 20px;
+          margin-bottom: 24px;
+        }
+
+        .nav-items__item:last-child a {
+          margin-bottom: 0;
+        }
+
+        @media screen and (min-width: 960px) {
+          .nav-items__item a {
+            margin-bottom: 0;
+          }
+        }
+
+        .header__hamburger {
+          width: 48px;
+          height: 100%;
+
+        }
+
+        .hamburger {
+          background-color: transparent;
+          border-color: transparent;
+          z-index: 9999;
+        }
+
+        @media screen and (min-width: 960px) {
+          .hamburger {
+            display: none;
+          }
+        }
+
+
+        .hamburger span {
+          width: 100%;
+          height: 1px;
+          background-color: #000;
+          position: relative;
+          transition: ease .4s;
+          display: block;
+        }
+
+        .hamburger span:nth-child(1) {
+          top: 0;
+        }
+
+        .hamburger span:nth-child(2) {
+          margin: 8px 0;
+        }
+
+        .hamburger span:nth-child(3) {
+          top: 0;
+        }
+
+        .header__nav.active {
+          transform: translateX(0);
+        }
+
+        .hamburger.active span:nth-child(1) {
+          top: 5px;
+          transform: rotate(45deg);
+        }
+
+        .hamburger.active span:nth-child(2) {
+          opacity: 0;
+
+        }
+
+        .hamburger.active span:nth-child(3) {
+          top: -13px;
+          transform: rotate(-45deg);
+        } 
+      
+
+
+
+
+      Header{
+        font-weight:bold;
+        z-index: 99999;
+        background-color:rgba(255,255,255,1);
+      } 
+      Header{
+        position: fixed;
+        height: 70px;
+        width:100%;
+        z-index: 999;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+      }
+      Header:UpMove{
+        animation: UpAnime 0.5s forwards;
+      }
+
+      @keyframes UpAnime{
+        from {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        to {
+          opacity: 0;
+          transform: translateY(-100px);
+        }
+      }
+
+      Header.DownMove{
+        animation: DownAnime 0.5s forwards;
+      }
+      @keyframes DownAnime{
+        from {
+          opacity: 0;
+          transform: translateY(-100px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      section{
+        padding:300px 0;
+      }
+
+    </style>
+    <script>
+      const ham = document.querySelector('#js-hamburger');
+      const nav = document.querySelector('#js-nav');
+
+      ham.addEventListener('click', function () {
+
+        ham.classList.toggle('active');
+        nav.classList.toggle('active');
+
+      });
+    </script>
+    
+    <!-- <div class="bottomNav fixed bottom-0 w-full">
+      <nav
+        style="border: 1px solid gray"
+        class="md:hidden bottom-0 w-full bg-gray-700 text-xs"
+      >
+        <ul
+          class="
+            flex
+            justify-around
+            text-white text-center
+            opacity-75
+            font-bold
+          "
+        >
+          <li class="py-4 hover:bg-gray-500">
+            <a href="/">
+              <span class="text-xs whitespace-nowrap">home</span>
+            </a>
+          </li>
+
+          <li class="py-4 hover:bg-gray-500">
+            <a href="/performance.html">
+              <span class="text-sm whitespace-nowrap">業務内容</span>
+            </a>
+          </li>
+          <li class="py-4 hover:bg-gray-500">
+            <a href="/corporate.html">
+              <span class="text-sm whitespace-nowrap">会社情報</span>
+            </a>
+          </li>
+
+          <li class="py-4 hover:bg-gray-500">
+            <a href="/access.html">
+              <span class="text-sm whitespace-nowrap">アクセス</span>
+            </a>
+          </li>
+          <li class="py-4 hover:bg-gray-500">
+            <a href="/pre-form.html">
+              <span class="text-sm whitespace-nowrap">問い合わせ</span>
+            </a>
+          </li>
+          <li class="py-4 hover:bg-gray-500">
+            <a href="recruitment.html" target="_blank" rel="noopener">
+              <span class="text-sm whitespace-nowrap">採用情報</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div> -->
+  </div>
+</template>
+
+

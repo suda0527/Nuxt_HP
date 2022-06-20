@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/contents/13", (function(a){return {data:[{item:{id:13,title:"コンテンツ",content:"",url:"Product_Sample4.png",published_at:a,created_at:a,updated_at:"2022-05-30T07:09:12.333Z"}}],fetch:{},mutations:void 0}}("2021-12-17T09:40:20.713Z")));
