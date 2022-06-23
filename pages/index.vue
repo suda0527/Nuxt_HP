@@ -53,10 +53,10 @@
         <Card>
           <template v-slot:image>
             <div class="img_wrap">
-              <a :href="`contents/${content.id}.html`">
+              <a :href="`/contents/${content.id}.html`">
                 <img
                   class="rounded-none content-img"
-                  :src="`images/${content.url}`"
+                  :src="`/images/${content.url}`"
                   alt=""
                 />
               </a>
@@ -77,6 +77,7 @@
 <script>
 const axios = require("axios");
 export default {
+  
   data() {
     return {};
   },
@@ -106,20 +107,22 @@ export default {
     };
   },
    mounted: function(){
-      // リクエスト時の秒数のレンジによって表示する動画を変化させる
-      window.onload = function(){
-        var now = new Date();
-        let time = now.getSeconds();
-        var img = document.getElementById('video');
-        
-        if(time >= 0 && time < 20){
-          img.setAttribute('src', 'images/reneil_corp_2.mp4');
-        }else if(time >= 20 && time < 40){
-          img.setAttribute('src', 'images/Sample1_mv.mp4');
-        }else if(time >= 40 && time < 60 ){
-          img.setAttribute('src', 'images/Sample2_mv.mp4');
-        }
+    // リクエスト時の秒数のレンジによって表示する動画を変化させる
+    window.onload = function(){
+      var now = new Date();
+      let time = now.getSeconds();
+      var img = document.getElementById('video');
+      console.log(now);
+      console.log("スクリプト実行");
+      if(time >= 0 && time < 20){
+        img.setAttribute('src', 'images/reneil_corp_2.mp4');
+      }else if(time >= 20 && time < 40){
+        img.setAttribute('src', 'images/Sample1_mv.mp4');
+      }else if(time >= 40 && time < 60 ){
+        img.setAttribute('src', 'images/Sample2_mv.mp4');
       }
+    };
   }
 };
+
 </script>

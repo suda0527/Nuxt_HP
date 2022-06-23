@@ -1,3 +1,4 @@
+
 <template>
   <div class="mt-20">
     <!-- component -->
@@ -9,14 +10,9 @@
           問い合わせフォーム
         </h1>
         <!-- <form v-on:submit.prevent="submit" v-if="showForm"> -->
-        <form
-          action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScW9NtRgSSfQch9K10YJNH28tX_V1NclTPOskcA2Ym0wLdLNQ/formResponse"
-          target="dummy"
-        >
+        <form method="post" action="mail.php" target="dummy">
           <div class="flex flex-col mb-4">
-            <label class="mb-2 font-bold text-lg text-gray-900" for="last_name"
-              >お問い合わせ内容（必須）</label
-            >
+            <label class="mb-2 font-bold text-lg text-gray-900" for="last_name">お問い合わせ内容（必須）</label>
             <p>
               <input
                 class="border py-2 px-3 text-grey-800"
@@ -229,58 +225,8 @@
     </div>
   </div>
 </template>
+<style>
+
+</style>
 <script>
-import axios from "axios";
-export default {
-  data() {
-    return {
-      // フォーム の表示
-      showForm: true,
-      qtype: "",
-      // メールアドレス
-      email: "",
-      yname: "",
-      content: "",
-      address: "",
-      tel: "",
-      corporate_name: "",
-      position: "",
-      job_type: "",
-      address_num: "",
-      // お問合せ内容
-      msg: "",
-    };
-  },
-  // methods: {
-  //   submit: function () {
-  //     const submitParams = new FormData();
-
-  //     // メールアドレスのname属性値
-  //     submitParams.append("entry.75024994", this.job_type);
-  //     submitParams.append("entry.1567551409", this.address_num);
-  //     submitParams.append("entry.1129030422", this.corporate_name);
-  //     submitParams.append("entry.1310069162", this.position);
-  //     submitParams.append("entry.2005620554", this.yname);
-  //     submitParams.append("entry.1045781291", this.email);
-  //     submitParams.append("entry.1166974658", this.tel);
-  //     submitParams.append("entry.839337160", this.content);
-
-  // お問合せ内容のname属性値
-
-  // CORSエラー対策
-  // const CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
-  // Googleフォームのaction属性値
-  // const GOOGLE_FORM_ACTION =
-  //   "https://docs.google.com/forms/u/0/d/e/1FAIpQLScW9NtRgSSfQch9K10YJNH28tX_V1NclTPOskcA2Ym0wLdLNQ/formResponse";
-
-  // Ajax POST通信
-  // axios.post(GOOGLE_FORM_ACTION, submitParams).then((res) => {
-  //   // フォーム非表示
-  //   this.showForm = false;
-  // });
-  // フォーム非表示
-  //     this.showForm = false;
-  //   },
-  // },
-};
 </script>

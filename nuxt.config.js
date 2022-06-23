@@ -93,7 +93,9 @@ export default {
     use: ["markdown-it-br"],
   },
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    
+  },
   googleFonts: {
     families: {
       "Zen Kurenaido": true,

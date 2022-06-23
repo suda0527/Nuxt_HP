@@ -82,6 +82,7 @@
   mounted: function(){
     let fadeInTarget = document.querySelectorAll('.fade-in');
 		window.addEventListener('scroll', function() {
+      console.log("cardスクリプト実行testdoc");
       for (let i = 0; i < fadeInTarget.length; i++){
         const rect = fadeInTarget[i].getBoundingClientRect().top;
         const scroll = window.pageYOffset || document.documentElement.scrollTop;
@@ -91,9 +92,6 @@
           fadeInTarget[i].classList.add('scroll-in');
         }
       }
-    });
-    	window.addEventListener('scroll', function() {
-        console.log("こんにちは");
     });
   }
 }

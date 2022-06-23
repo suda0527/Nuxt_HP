@@ -2,7 +2,7 @@
 <!-- This is an example component -->
 <template>
   <div class="">
-    <header class="fixed top-0 left-0 right-0">
+    <header class="fixed top-0 left-0 right-0" id="header">
       <nav
         class="
           font-mono
@@ -247,10 +247,6 @@
 <script>
   export default {
     methods: {
-      resize() {
-        alert('おされたで')
-      },
-
       ChangeDisp(mode)
       {
           const test = document.getElementById("navtest")
@@ -277,10 +273,21 @@
       }
     } ,
     mounted: function () {
-      window.addEventListener('resize', this.handleResize)
-    },
-    beforeDestroy: function () {
-      window.removeEventListener('resize', this.handleResize)
+      window.addEventListener('scroll', function() {
+        console.log("ヘッダースクリプト実行")
+        let wi = window.innerWidth;
+        wi = wi * 0.54 - 20;
+        let w = window.scrollY;
+        // let element = document.getElementById('container');
+        //console.log("画面の幅" + wi);
+        const head = document.getElementById("header")
+        if(w > wi){
+          head.style.transitionDuration = "0.5s";
+          head.style.transform = "translate(0, -100%)";
+        }else if(w < wi){
+          head.style.transform = "translate(0, 0)";
+        }
+      });
     }
   }
 </script>
