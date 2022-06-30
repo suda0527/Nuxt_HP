@@ -3,9 +3,9 @@
 <template>
   <!-- component -->
   <!-- This is an example component -->
-  <div class="box-inner max-w-md mx-auto">
+  <div class="box-inner max-w-full p-2 mx-5 mb-5">
     <div
-      class="fade-in fade-in-up box bg-white border border-gray-200 rounded-none mt-20 max-w-sm m-5 js-scroll-fall"
+      class="fade-in fade-in-up box bg-white border border-gray-200 rounded-none mt-5 min-w-full max-w-full js-scroll-fall"
     >
       <slot name="image" />
       <slot name="link">
@@ -80,9 +80,7 @@
   
   },
   mounted: function(){
-    let fadeInTarget = document.querySelectorAll('.fade-in');
-		window.addEventListener('scroll', function() {
-      console.log("cardスクリプト実行testdoc");
+    window.addEventListener('load', function(){
       for (let i = 0; i < fadeInTarget.length; i++){
         const rect = fadeInTarget[i].getBoundingClientRect().top;
         const scroll = window.pageYOffset || document.documentElement.scrollTop;
@@ -93,6 +91,18 @@
         }
       }
     });
-  }
+    let fadeInTarget = document.querySelectorAll('.fade-in');
+		window.addEventListener('scroll', function() {
+      for (let i = 0; i < fadeInTarget.length; i++){
+        const rect = fadeInTarget[i].getBoundingClientRect().top;
+        const scroll = window.pageYOffset || document.documentElement.scrollTop;
+        const offset = rect + scroll;
+        const windowHeight = window.innerHeight; // 現在のブラウザの高さ
+        if (scroll > offset - windowHeight + 150) {
+          fadeInTarget[i].classList.add('scroll-in');
+        }
+      }
+    });
+  },
 }
 </script>

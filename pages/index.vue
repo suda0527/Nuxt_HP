@@ -1,61 +1,23 @@
 <template>
-  <div class="">
-    <style>
-      .img_wrap{
-        border: 1px solid #ddd;
-        overflow: hidden;
-        cursor: pointer;
-        z-index: 1;          
-      }
-      
-      .img_wrap img{
-        width: 100%;
-        transition-duration: 0.5s;
-      }
-
-      .img_wrap:hover img{
-        transform: scale(1.2);
-        transition-duration: 0.5s;
-      }
-      .wrapper {
-        position: relative;
-        width: 100%;
-      }
-
-      #video{
-        min-width: 100%;
-        min-width: 100vw; 
-      }
-    </style>
-
-    <div class="wrapper center mt-0">
-      <video id="video" muted loop autoplay playsinline disablePictureInPicture>
+ <div class="">
+    <div class="wrapper center mt-16 w-full">
+      <video class="w-full" id="video" muted loop autoplay playsinline disablePictureInPicture>
         <source src="" type='video/mp4'>
       </video>
     </div>
 
-    <div
-      class="
-        grid grid-cols-1
-        sm:grid-cols-2
-        md:grid-cols-3
-        lg:grid-cols-4
-        xl:grid-cols-6
-      "
-    ></div>
-
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+    <div class=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4">
       <div
         v-for="content in sortedContentsByUpdateAt"
         :key="content.id"
-        class="mx-auto"
+        class=""
       >
         <Card>
           <template v-slot:image>
-            <div class="img_wrap">
+            <div class="img_wrap border overflow-hidden cursor-pointer z-0">
               <a :href="`/contents/${content.id}.html`">
                 <img
-                  class="rounded-none content-img"
+                  class="rounded-none content-img w-full transform hover:scale-125 duration-500"
                   :src="`/images/${content.url}`"
                   alt=""
                 />
@@ -79,7 +41,10 @@ const axios = require("axios");
 export default {
   
   data() {
-    return {};
+    return {flag:true};
+  },
+  methods: {
+    
   },
   computed: {
     sortedContentsByUpdateAt() {
@@ -101,27 +66,35 @@ export default {
       //   },
       // }),
     ]);
-    // ("Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjM5NjM3MTQwLCJleHAiOjE2NDIyMjkxNDB9.x309Z9xogJglOCjXQVtVnRrhZKAdUyNlP2KIFWUSipw");
     return {
       contents: res[0].data,
     };
   },
    mounted: function(){
     // リクエスト時の秒数のレンジによって表示する動画を変化させる
-    window.onload = function(){
+    window.addEventListener('load', function(){
       var now = new Date();
       let time = now.getSeconds();
       var img = document.getElementById('video');
-      console.log(now);
-      console.log("スクリプト実行");
-      if(time >= 0 && time < 20){
-        img.setAttribute('src', 'images/reneil_corp_2.mp4');
-      }else if(time >= 20 && time < 40){
-        img.setAttribute('src', 'images/Sample1_mv.mp4');
-      }else if(time >= 40 && time < 60 ){
-        img.setAttribute('src', 'images/Sample2_mv.mp4');
+      if(time >= 0 && time < 12){
+        img.setAttribute('src', 'images/reneil_corp_mv1.mp4');
+      }else if(time >= 12 && time < 24){
+        img.setAttribute('src', 'images/reneil_corp_mv2.mp4');
+      }else if(time >= 24 && time < 36 ){
+        img.setAttribute('src', 'images/reneil_corp_mv3.mp4');
+      }else if(time >= 36 && time < 48 ){
+        img.setAttribute('src', 'images/reneil_corp_mv4.mp4');
+      }else if(time >= 48 && time < 60 ){
+        img.setAttribute('src', 'images/reneil_corp_mv5.mp4');
+      }else{
+        img.setAttribute('src', 'images/reneil_corp_mv5.mp4');
       }
-    };
+    });
+    window.addEventListener('load', function(){
+      var now = new Date();
+      let time = now.getSeconds();
+      var img = document.getElementById('video');
+    });
   }
 };
 

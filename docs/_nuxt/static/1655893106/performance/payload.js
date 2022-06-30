@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/performance", {data:[{}],fetch:{},mutations:void 0});

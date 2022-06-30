@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/contents/13", (function(a){return {data:[{item:{id:13,title:"コンテンツ",content:"",url:"product_spot_6e3dc3584c.png",published_at:a,created_at:a,updated_at:"2022-05-26T04:49:55.551Z"}}],fetch:{},mutations:void 0}}("2021-12-17T09:40:20.713Z")));

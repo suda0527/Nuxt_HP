@@ -1,12 +1,12 @@
 <template>
-  <div>
-    <div>
+  <!-- <div>
+    <div> -->
       <MainContent>
         <template v-slot:title>{{ item.title }}</template>
         <template v-slot:image>
           <img
-            class="mx-auto py-20"
-            :src="`images/${item.url}`"
+            class="mx-auto py-10 w-full"
+            :src="`../images/${item.url}`"
             alt=""
           />
         </template>
@@ -14,8 +14,8 @@
           <div v-html="$md.render(item.content)"></div>
         </template>
       </MainContent>
-    </div>
-  </div>
+    <!-- </div>
+  </div> -->
 </template>
 <script>
 import axios from "axios";

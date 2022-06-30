@@ -24,7 +24,7 @@ export default {
   },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "reneil",
+    title: "株式会社リネイル",
     htmlAttrs: {
       lang: "ja",
     },

@@ -18,6 +18,7 @@
 
   /* ... */
 }
+
 .h-500 {
   height: 500px;
 }
@@ -28,6 +29,40 @@
 strong {
   font-weight: bold;
 }
+.link{
+  @apply m-4 p-5 border-solid  text-center hover:shadow-md;
+}
+.recruit-content-site-url{
+  @apply text-xs leading-tight overflow-hidden max-h-4;
+}
+.bcard-wrapper{
+  @apply block w-full mx-0 my-2 rounded-sm p-3 border-solid border max-w-full;
+}
+.bcard-header{
+  @apply relative h-8 mb-1 block pl-6;
+}
+.bcard-favicon{
+  @apply absolute top-0 left-0 w-4  h-4;
+}
+.bcard-main{
+  @apply overflow-hidden relative block pr-28 h-28;
+}
+.bcard-title{
+  @apply text-lg mt-0 mr-0 ml-0 mb-1 leading-snug max-h-12 overflow-hidden font-bold;
+}
+.bcard-description{
+  @apply leading-normal text-xs max-h-20 overflow-hidden;
+}
+.bcard-img{
+  @apply  w-24 h-24 absolute top-0 right-0 bg-cover bg-center;
+}
+.sec{
+  @apply p-0 bg-white text-center break-words;
+}
+.ul-li{
+  @apply m-5 p-6 w-80 transition-shadow duration-75;
+}
+
 .content-img {
   /* width: 330px;
   height: 200px; */

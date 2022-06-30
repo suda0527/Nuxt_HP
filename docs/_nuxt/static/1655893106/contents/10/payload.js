@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/contents/10", (function(a){return {data:[{item:{id:10,title:"キッティングコンテンツ1",content:"紹介文をいれてください",url:"Product_Sample9.png",published_at:a,created_at:a,updated_at:"2022-05-30T07:09:23.723Z"}}],fetch:{},mutations:void 0}}("2021-12-17T09:35:11.473Z")));

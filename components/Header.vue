@@ -33,7 +33,6 @@
         <div class="pc-nav">
           <div class="md:items-center md:w-auto">
             <div class="md:flex hidden pt-5">
-              <a class="block mr-4" href="/">home</a>
               <a class="block mr-4" href="/performance.html">業務内容</a>            
               <a class="block mr-4" href="/corporate.html">会社情報</a>
               <a class="block mr-4" href="/access.html">アクセス</a>
@@ -45,7 +44,6 @@
       </nav>
      <nav class="sp-nav" id="navtest">
          <ul>
-            <li><a href="/">home</a></li>
             <li><a href="/performance.html">業務内容</a></li>
             <li><a href="/corporate.html">会社情報</a></li>
             <li><a href="/access.html">アクセス</a></li>
@@ -192,7 +190,7 @@
       Header{
         font-weight:bold;
         z-index: 99999;
-        background-color:rgba(255,255,255,0);
+        background-color:rgba(255,255,255,1);
       } 
       Header{
         position: fixed;
@@ -265,6 +263,7 @@
         // resizeのたびにこいつが発火するので、ここでやりたいことをやる
         this.width = window.innerWidth;
         this.height = window.innerHeight;
+        console.log("ヘッダー")
         if(this.width > 1070){
           const sp_nav = document.getElementById("navtest")
           sp_nav.style.transform = "translate(0,-100%)";
@@ -273,21 +272,7 @@
       }
     } ,
     mounted: function () {
-      window.addEventListener('scroll', function() {
-        console.log("ヘッダースクリプト実行")
-        let wi = window.innerWidth;
-        wi = wi * 0.54 - 20;
-        let w = window.scrollY;
-        // let element = document.getElementById('container');
-        //console.log("画面の幅" + wi);
-        const head = document.getElementById("header")
-        if(w > wi){
-          head.style.transitionDuration = "0.5s";
-          head.style.transform = "translate(0, -100%)";
-        }else if(w < wi){
-          head.style.transform = "translate(0, 0)";
-        }
-      });
+
     }
   }
 </script>

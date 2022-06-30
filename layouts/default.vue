@@ -1,8 +1,8 @@
 <template>
-  <v-app>
+  <v-app >
     <Header />
     <div
-      class="min-h-screen md:mt-0 bg-gradient-to-b from-blue-100 to-blue-100"
+      class="min-h-screen bg-gradient-to-b from-blue-100 to-blue-100 min-w-full"
     >
       <Nuxt />
     </div>

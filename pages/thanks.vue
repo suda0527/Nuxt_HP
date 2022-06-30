@@ -12,7 +12,7 @@
             <p>
               入力頂いた内容が送信されました。頂いた内容は後程確認次第お返事させて頂きます。
             </p>
-            <Nuxt-link to="/">
+            <Nuxt-link to="https://www.reneil.jp/test/doc/">
               <button
                 class="block bg-green-400 hover:bg-green-600 text-white uppercase text-lg mx-auto p-4 rounded"
               >

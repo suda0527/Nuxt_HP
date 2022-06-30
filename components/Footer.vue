@@ -1,7 +1,8 @@
 <!-- component -->
 
 <template>
-  <footer>
+  <div style=" position: relative" class="mt-20">
+  <footer style="position: absolute; bottom: 0;" class="w-full min-w-full" id="footer">
     <div class="bg-gray-900">
       <div
         class="
@@ -23,4 +24,11 @@
       </div>
     </div>
   </footer>
+    <style>
+      Footer{
+        z-index: 999999;
+        position: fixed;
+      }
+    </style>
+  </div>
 </template>

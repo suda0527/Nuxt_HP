@@ -8,7 +8,7 @@
         </template>
         <template v-slot:content>
           <!-- <img src="/image/large_IMG_0825_7acb62c5e9.JPG"> -->
-          <table border="2" width="110%">
+          <table border="2" width="100%">
           <tr>
             <th class="pl-2" width="20%" height="50" bgcolor="#6B7280" style="color:white">商号・名称</th>
             <th class="pl-2"  width="80%">株式会社リネイル</th>
@@ -46,7 +46,7 @@
         <div class=" font-bold my-10 text-2xl text-center">
           役員一覧
         </div>
-        <table border="2" width="110%">
+        <table border="2" width="100%">
           <tr>
             <th class="pl-2" width="20%" height="50" bgcolor="#6B7280"  style="color:white">代表取締役会長</th>
             <th class="pl-2" width="80%">添田　潤一</th>
@@ -68,7 +68,7 @@
         <div class="my-10 font-bold text-center text-2xl">
               会社沿革
         </div>
-        <table border="2" width="110%">
+        <table border="2" width="100%">
           <tr>
             <th class="pl-2" width="20%" height="50" bgcolor="#6B7280"  style="color:white">平成19年6月</th>
             <th class="pl-2" width="80%">株式会社リネイル」として、 前橋市東片貝町に設立（資 本金１５万円）<br />代表取締役社長　添田　潤一 就任</th>
